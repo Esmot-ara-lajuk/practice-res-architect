@@ -16,16 +16,19 @@
     display: flex;
 
 }
-body{
-    max-width: 1440px;
-    margin: 0 auto;
-}
 .common-color{
     color: rgb(66, 66, 66);
     font-size: 1.12rem;
     font-weight: 500;
     line-height: 1.625rem;
 
+}
+.text-orange{
+    color: #FF900E;
+}
+.text-gray{
+    color: grey;
+    font-weight: 600;
 }
 .btn-primary{
     background-color: #FF900E;
@@ -35,6 +38,12 @@ body{
     font-weight: 600;
     border-radius: 8px;
     border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: #e98008;
+    transition: 0.5s;
 }
 
 /* nav style */
@@ -44,10 +53,10 @@ header{
 nav{
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 2rem 8rem;
     }
-mav h3{
-    font-size: 2.81rem;
+nav h3{
+    font-size: 1.81rem;
     line-height: 3.30rem;
 }
 nav ul li{
@@ -57,9 +66,18 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
 }
+nav a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+}
 nav, .banner{
-   /*  max-width: 1440px;
-    margin: 0 auto; */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* styling banner */
@@ -73,8 +91,46 @@ nav, .banner{
     font-size: 4rem;
     font-weight: 700;
     line-height: 4.68rem;
+    padding-bottom: 2rem;
 }
 .banner img{
     width: 100%;
     margin: 50px 0;
+}
+/* styling features section */
+.features{
+    align-items: center;
+}
+.features-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.features-description{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.features-description h3{
+    font-size: 2.81rem;
+    font-weight: 700;
+    line-height: 3.31rem;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-links
+    {
+        flex-direction: column;
+    }
+    .features{
+        flex-direction: column-reverse;
+    }
+    .features-images{
+        grid-template-columns: 1fr;
+    }
+    .features-description{
+        margin: 4rem 0;
+        text-align: center;
+    }
+    
+ 
 }
